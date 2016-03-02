@@ -5,9 +5,7 @@ body {
 #jumbotron1 {
   display: inline-block;
 }
-#a, #b, #c, #d, #e, #f, #g {
-  border: 2px solid rgba(0, 79, 184, 0.86);
-  background-color: rgba(182, 185, 255, 0.8);
+#temp, #humidity, #wind, #precip  {
   display: flex;
   justify-content: space-around;
   min-height: 100px;
@@ -18,3 +16,8 @@ body {
   color: rgb(43, 28, 28);
   font-weight: bold;
 }
+
+/*#location {
+  display: flex;
+  justify-content: center;
+}*/
