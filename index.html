@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Z Weather</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src='main.js'></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron col-xs-offset-3 col-sm-offset-0 col-md-offset-1 col-lg-offset-2" id='jumbotron1'>
+      <h3 class="text-left text-capitalize">Z Weather</h3>
+      <div class='col-xs-12 col-offset-md'>
+        <form class="form-inline" id='searchForm'>
+          <div class="form-group">
+            <label>Seach for City and Country or Zip Code:</label>
+            <br>
+            <input type="search" class="form-control" id="searchCity" placeholder="City">
+            <input type="search" class="form-control" id="searchCountry" placeholder="Country eg. UK, US">
+            <input type="search" class="form-control" id="searchZip" placeholder="Zip Code">
+            <select id='unitInput' class='form-control btn-info' style="width: 100px;">
+              <option value="metric">°C</option>
+              <option value="imperial">°F</option>
+            </select>
+            <button type="submit" class="btn btn-primary" id='submit'>Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+      <div class="row">
+        <div class="col-xs-12" id='a'>A</div>
+        <div class="col-xs-12 col-sm-6 col-md-4" id='b'>B</div>
+        <div class="col-xs-12 col-sm-6 col-md-4" id='c'>C</div>
+        <div class="col-xs-12 col-sm-6 col-md-4" id='d'>D</div>
+        <div class="col-xs-12 col-sm-6 col-md-4" id='e'>E</div>
+        <div class="col-xs-12 col-sm-6 col-md-4" id='f'>F</div>
+        <div class="col-xs-12 col-sm-6 col-md-4" id='g'>G</div>
+      </div>
+    </div>
+</body>
+</html>
