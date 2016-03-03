@@ -5,10 +5,9 @@ body {
 #jumbotron1 {
   display: inline-block;
 }
-#temp, #humidity, #wind, #precip  {
+#precip  {
   display: flex;
   justify-content: space-around;
-  min-height: 100px;
 }
 
 #unitInput {
@@ -17,7 +16,16 @@ body {
   font-weight: bold;
 }
 
-/*#location {
-  display: flex;
-  justify-content: center;
-}*/
+#favs {
+  display: inline;
+ float: right;
+}
+
+.table {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+.invisible {
+  display: hidden;
+}

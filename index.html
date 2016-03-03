@@ -17,15 +17,27 @@
 <body>
   <div class="container">
     <div class="jumbotron col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-2" id='jumbotron1'>
-      <h3 class="text-left text-capitalize">Z Weather</h3>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <h3 class="text-left navbar-brand col-xs-2">Z Weather</h3>
+          </div>
+          <div id='favs' class='col-xs-offset-1'>
+              <button id="fav3" value='fav3' class='invisible no-wrap'><span class='fav3 small'></span></button>
+              <button id="fav2" value='fav2' class='invisible no-wrap'><span class='fav2 small'></span></button>
+              <button id="fav1" value='fav1' class='invisible no-wrap'><span class='fav1 small'></span></button>
+              <button type="submit" class="btn btn-primary btn-xs" id='favSubmit'>Add to Favs</button>
+          </div>
+        </div>
+      </nav>
       <div class='col-xs-10 col-offset-md'>
         <form class="form-inline" id='searchForm'>
           <div class="form-group">
-            <label>Seach for City and Country Code or Zip Code:</label>
+            <label>Enter US Zip Code or City and US State/Country:</label>
             <br>
-            <input type="search" class="form-control" id="searchCity" placeholder="City">
-            <input type="search" class="form-control" id="searchCountry" placeholder="Country eg. UK, US">
             <input type="search" class="form-control" id="searchZip" placeholder="Zip Code">
+            <input type="search" class="form-control" id="searchCity" placeholder="City">
+            <input type="search" class="form-control" id="searchCountry" placeholder="US State/Country">
             <select id='unitInput' class='form-control btn-info' style="width: 100px;">
               <option value="metric">°C</option>
               <option value="imperial">°F</option>
@@ -36,27 +48,68 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div id='wPanel' class="container invisible">
       <div class="row">
         <div class="panel panel-default col-xs-10 col-xs-offset-1">
-          <div class="panel-heading">
-            <h3 class="panel-title">Today's Weather:  <span id="location">Half Moon Bay</span></h3>
+          <div class="panel-heading" id='titleTemplate'>
+            <h3 class="panel-title">Today's Weather:  <span id="location"></span></h3>
           </div>
-            <div class="panel-body" id='template'>
-              <div class='col-xs-offset-1 col-xs-2'><img id='wIcon'></div>
-              <div id="tempurature" class='col-xs-2'></div>
-              <div id="precip" class='col-xs-2'></div>
-              <div id="humidity" class='col-xs-2'></div>
-              <div id="wind" class='col-xs-2'></div>
+            <div class="panel-body" id='conditionsTemplate'>
+              <table id='weather' class="table">
+                <thead>
+                  <tr>
+                    <th>Weather:</th>
+                    <th>Tempurature:</th>
+                    <th>Precipitation:</th>
+                    <th>Humidity:</th>
+                    <th>Wind Speed:</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><img id='wIcon'>
+                      <br><span id='type' class='text-center lead'></span>
+                    </th>
+                    <td><span class='text-center lead' id="tempurature"></td>
+                    <td><span class='text-center lead' id="precip"></span></td>
+                    <td><span class='text-center lead' id="humidity"></span></td>
+                    <td><span class='text-center lead' id="wind"></span></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
         </div>
-        <!-- <div class="col-xs-12" id='currentWeather'>Current Weather</div>
-        <div class="col-xs-12 col-sm-6 col-md-4" id='tempMaxMin'>Temp Max/Min</div>
-        <div class="col-xs-12 col-sm-6 col-md-4" id='sunRiseSunSet'>Sunrise Sunset</div>
-        <div class="col-xs-12 col-sm-6 col-md-4" id='wind'>Wind</div>
-        <div class="col-xs-12 col-sm-6 col-md-4" id='precipitation'>Precipitation</div>
-        <div class="col-xs-12" id='fiveDayForecast'>Five Day Forcast</div> -->
       </div>
     </div>
+    <div id='fPanel' class="container invisible">
+        <div class="row">
+          <div class="panel panel-default col-xs-10 col-xs-offset-1">
+            <div class="panel-heading" id='forecastTitle'>
+              <h3 class="panel-title">Three Day Forecast:</h3>
+            </div>
+              <div class="panel-body" id='forecastTemplate'>
+                <table class="table table-hover">
+                  <tbody>
+                    <tr>
+                      <th scope="row"><span id="day1"></span></th>
+                      <td><img id='day1Icon'></td>
+                      <td id='day1Text'></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><span id="day2"></span></th>
+                      <td><img id='day2Icon'></td>
+                      <td id='day2Text'></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><span id="day3"></span></th>
+                      <td><img id='day3Icon'></td>
+                      <td id='day3Text'></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
