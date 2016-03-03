@@ -27,5 +27,5 @@ body {
 }
 
 .invisible {
-  display: hidden;
+  visibility: hidden;
 }
